@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="transition duration-500">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohammed Aman | Data Science Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s forwards;
+      }
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .dark .dark\:bg-gray-900 {
+        background-color: #111827;
+      }
+      .dark .dark\:text-white {
+        color: #fff;
+      }
+      .dark .dark\:bg-blue-900 {
+        background-color: #1e3a8a;
+      }
+      .dark .dark\:text-blue-200 {
+        color: #bfdbfe;
+      }
+      .dark .dark\:bg-gray-800 {
+        background-color: #1f2937;
+      }
+      .dark .dark\:border-gray-700 {
+        border-color: #374151;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+    <div class="min-h-screen transition duration-500">
+      <header class="flex justify-between items-center p-6 max-w-6xl mx-auto">
+        <h1 class="text-2xl font-bold">Mohammed Aman</h1>
+        <button onclick="toggleDarkMode()" class="text-xl" id="dark-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </header>
+
+      <main class="max-w-6xl mx-auto px-6">
+        <section class="mb-12 fade-in-up">
+          <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+          <p class="text-lg">
+            Aspiring Data Scientist with a passion for uncovering insights from data. Skilled in Python, data visualization, and machine learning.
+          </p>
+        </section>
+
+        <section class="mb-12 fade-in-up">
+          <h2 class="text-3xl font-semibold mb-4">Projects</h2>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="p-4 border dark:border-gray-700 rounded-xl shadow-md bg-gray-50 dark:bg-gray-800">
+              <h3 class="text-xl font-semibold mb-2">Car Sales Recession Analysis</h3>
+              <p class="mb-2">Analyzed the impact of economic recessions on automobile sales using Python and data visualization techniques.</p>
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="px-2 py-1 text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded">Pandas</span>
+                <span class="px-2 py-1 text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded">Matplotlib</span>
+                <span class="px-2 py-1 text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded">Seaborn</span>
+              </div>
+              <a href="https://github.com/mohammedaman0011" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="p-4 border dark:border-gray-700 rounded-xl shadow-md bg-gray-50 dark:bg-gray-800">
+              <h3 class="text-xl font-semibold mb-2">Customer Segmentation</h3>
+              <p class="mb-2">Used K-means clustering to segment customers for targeted marketing strategies.</p>
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="px-2 py-1 text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded">Scikit-learn</span>
+                <span class="px-2 py-1 text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded">Pandas</span>
+                <span class="px-2 py-1 text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded">Jupyter</span>
+              </div>
+              <a href="https://github.com/mohammedaman0011" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank">View on GitHub</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-12 fade-in-up">
+          <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+          <div class="flex gap-4 text-2xl">
+            <a href="https://github.com/mohammedaman0011" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="text-center py-4 border-t dark:border-gray-700">
+        <p>© <span id="year"></span> Mohammed Aman. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      function toggleDarkMode() {
+        const html = document.documentElement;
+        html.classList.toggle('dark');
+        const icon = document.getElementById('dark-toggle').firstElementChild;
+        icon.classList.toggle('fa-sun');
+        icon.classList.toggle('fa-moon');
+      }
+    </script>
+  </body>
+</html>
